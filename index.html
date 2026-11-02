@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101622">
+  <meta name="description" content="Auditoria pública e passiva de três sites de serviços GSM.">
+  <title>Auditoria de Sites GSM</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b0e14;--panel:#121824;--panel2:#171f2d;--text:#edf2fa;--muted:#a4afc0;--line:#273244;--cyan:#66e3d0;--amber:#ffc56e;--red:#ff8e8e;--green:#98e6ad;--blue:#9bbaff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 450px at 80% -10%,#193140 0,transparent 60%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--cyan)}a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:#0b0e14dd;backdrop-filter:blur(10px);position:sticky;top:0;z-index:5}.nav{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.04em;color:var(--text);text-decoration:none}.brand b{color:var(--cyan)}nav{display:flex;gap:20px;font-size:.9rem}nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--text)}
+    .hero{padding:76px 0 52px}.eyebrow{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(2.2rem,6vw,4.7rem);line-height:1.02;letter-spacing:-.045em;max-width:850px;margin:18px 0}.hero p{max-width:720px;color:var(--muted);font-size:1.12rem}.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.pill{border:1px solid var(--line);background:#111824;padding:6px 11px;border-radius:999px;color:#d1d9e5;font-size:.8rem}
+    .section{padding:36px 0}.section h2{font-size:1.55rem;margin:0 0 8px}.lead{color:var(--muted);margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:linear-gradient(145deg,#151d2a,#10151e);border:1px solid var(--line);border-radius:16px;padding:22px;min-height:190px}.card h3{margin:8px 0 4px;font-size:1.16rem}.card p{color:var(--muted);margin:8px 0}.card a{font-size:.92rem}.status{display:inline-flex;align-items:center;gap:7px;font-size:.76rem;font-weight:800;letter-spacing:.03em}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}.dot.warn{background:var(--amber)}
+    .findings{display:grid;gap:12px}.finding{display:grid;grid-template-columns:110px 1fr;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:18px}.severity{font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}.severity.high{color:var(--red)}.severity.medium{color:var(--amber)}.severity.na{color:var(--blue)}.finding h3{margin:0 0 4px;font-size:1rem}.finding p{margin:0;color:var(--muted);font-size:.94rem}.finding .site{display:block;color:#8392a8;font-size:.78rem;margin-bottom:5px}
+    .note{padding:20px;border:1px solid #57472e;background:#241d13;border-radius:14px;color:#e7d4b1}.note strong{color:#ffda97}.actions{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.action{padding:18px;border-left:2px solid var(--cyan);background:var(--panel);border-radius:0 12px 12px 0;color:#dce5f1}.action b{display:block;margin-bottom:6px}.foot{border-top:1px solid var(--line);padding:28px 0 46px;color:var(--muted);font-size:.88rem}.foot p{margin:6px 0}.button{display:inline-block;background:var(--cyan);color:#08201d;padding:10px 16px;border-radius:9px;text-decoration:none;font-weight:800;margin-top:14px}.button:hover{filter:brightness(1.08)}
+    @media(max-width:760px){nav{gap:12px;font-size:.8rem}.grid,.actions{grid-template-columns:1fr}.hero{padding-top:52px}.finding{grid-template-columns:1fr;gap:4px}.nav{height:auto;min-height:62px;flex-wrap:wrap;padding:12px 0}.card{min-height:0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="brand" href="#inicio">AUDITORIA <b>GSM</b></a><nav aria-label="Navegação principal"><a href="#escopo">Escopo</a><a href="#achados">Achados</a><a href="#acoes">Ações</a></nav></div></header>
+  <main id="inicio">
+    <section class="wrap hero">
+      <div class="eyebrow">Revisão pública · Brasil</div>
+      <h1>Auditoria de sites de serviços GSM</h1>
+      <p>Uma leitura da transparência, privacidade e governança visível em três vitrines de serviços técnicos. A análise é passiva e não afirma vulnerabilidades sem evidência técnica.</p>
+      <div class="meta"><span class="pill">Coleta: 2 nov 2026</span><span class="pill">Sem login ou compra</span><span class="pill">Relatório documentado</span></div>
+      <a class="button" href="AUDITORIA.md">Abrir relatório completo</a>
+    </section>
+    <section class="wrap section" id="escopo">
+      <h2>Sites revisados</h2><p class="lead">Estado de acesso durante a coleta e resumo da revisão pública.</p>
+      <div class="grid">
+        <article class="card"><span class="status"><i class="dot"></i> Página acessível</span><h3>CONECT PRO</h3><p>Catálogo e termos levantam questões de autorização, identidade comercial e privacidade do cadastro.</p><a href="https://conectproo.com/" target="_blank" rel="noopener noreferrer">Visitar conectproo.com ↗</a></article>
+        <article class="card"><span class="status"><i class="dot warn"></i> Não acessível na coleta</span><h3>Dragon Unlocker</h3><p>O domínio não carregou no navegador de auditoria. A causa não foi determinada; sem achados técnicos atribuídos.</p><a href="https://dracounlocker.com/" target="_blank" rel="noopener noreferrer">Tentar dracounlocker.com ↗</a></article>
+        <article class="card"><span class="status"><i class="dot"></i> Página acessível</span><h3>KENNCELLSERVER</h3><p>Foram observados pontos a validar em contatos externos, identificação comercial e coleta de dados pessoais.</p><a href="https://kenncellserver.com/" target="_blank" rel="noopener noreferrer">Visitar kenncellserver.com ↗</a></article>
+      </div>
+    </section>
+    <section class="wrap section" id="achados">
+      <h2>Achados prioritários</h2><p class="lead">Prioridade baseada no impacto potencial e na evidência pública observada.</p>
+      <div class="findings">
+        <article class="finding"><div class="severity high">Alta · CP-01</div><div><span class="site">CONECT PRO</span><h3>Termos e catálogo precisam estar alinhados</h3><p>Os termos restringem usos sem autorização, enquanto alguns produtos são descritos com termos de bypass. Explicitar critérios de elegibilidade e comprovação de titularidade por serviço.</p></div></article>
+        <article class="finding"><div class="severity high">Alta · CP-02</div><div><span class="site">CONECT PRO</span><h3>Identificação comercial inconsistente</h3><p>Telefone brasileiro, horário GMT e endereço nos EUA aparecem juntos. Publicar dados reais do operador, jurisdição e canais de atendimento coerentes.</p></div></article>
+        <article class="finding"><div class="severity high">Alta · CP-03</div><div><span class="site">CONECT PRO</span><h3>Cadastro pede vários dados pessoais</h3><p>Nome, celular e endereço são solicitados. Explicar finalidade, retenção, compartilhamentos e necessidade de cada campo antes do cadastro.</p></div></article>
+        <article class="finding"><div class="severity high">Alta · KC-01</div><div><span class="site">KENNCELLSERVER</span><h3>Destino de contato externo merece validação</h3><p>Uma ação/imagem rotulada como WhatsApp aparece ligada a outro domínio. Confirmar se o terceiro é oficial e tornar o destino transparente.</p></div></article>
+        <article class="finding"><div class="severity high">Alta · KC-02/03</div><div><span class="site">KENNCELLSERVER</span><h3>Identidade e aviso de privacidade</h3><p>Validar endereço e canais de contato e apresentar aviso claro sobre os dados pedidos no cadastro, suas finalidades e compartilhamentos.</p></div></article>
+        <article class="finding"><div class="severity medium">Média · CP-04/05 · KC-05</div><div><span class="site">CONECT PRO · KENNCELLSERVER</span><h3>Promessas e informações comerciais</h3><p>Delimitar promessas absolutas de segurança e entrega; padronizar idioma, moeda, prazos e condições de reembolso.</p></div></article>
+        <article class="finding"><div class="severity na">Sem classificação · DR-01</div><div><span class="site">DRAGON UNLOCKER</span><h3>Coleta inconclusiva</h3><p>O site não foi acessível nesta rodada. Repetir a consulta de rede e verificar DNS, redirecionamentos e resposta HTTP antes de atribuir qualquer problema.</p></div></article>
+      </div>
+    </section>
+    <section class="wrap section" id="acoes"><h2>Próximas ações recomendadas</h2><p class="lead">Ordem prática para reduzir ambiguidade e melhorar confiança.</p>
+      <div class="actions"><div class="action"><b>1. Autorizações</b>Publicar critérios claros e validar a autorização aplicável a cada serviço.</div><div class="action"><b>2. Identidade e privacidade</b>Corrigir dados comerciais e avisar como os dados dos clientes são usados.</div><div class="action"><b>3. Revisão técnica autorizada</b>Validar TLS, cabeçalhos, cookies e fluxos quando houver autorização do operador.</div></div>
+    </section>
+    <section class="wrap section"><div class="note"><strong>Limite desta auditoria:</strong> foram consultadas páginas públicas. Não houve varredura, exploração, autenticação, compra nem envio de dados. Os achados indicam pontos para revisão e não constituem conclusão jurídica nem confirmação de falha técnica.</div></section>
+  </main>
+  <footer class="foot"><div class="wrap"><p>Auditoria pública de sites GSM · 2 de novembro de 2026</p><p>Fontes: páginas públicas dos domínios listados. Veja os detalhes, evidências e recomendações no <a href="AUDITORIA.md">relatório completo</a>.</p></div></footer>
+</body>
+</html>
